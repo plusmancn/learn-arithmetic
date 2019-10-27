@@ -19,6 +19,7 @@ public class Insert {
                 }
             }
 
+            // 存在原地赋值的情况
             a[j+1] = temp;
         }
     }
