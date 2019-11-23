@@ -10,6 +10,8 @@ import java.util.*;
  *     TreeNode right;
  *     TreeNode(int x) { val = x; }
  * }
+ *
+ * https://leetcode.com/problems/binary-tree-level-order-traversal/
  */
 public class LevelOrderTraversal {
     static public class TreeNodeWithLevel {
@@ -22,6 +24,7 @@ public class LevelOrderTraversal {
         }
     }
 
+    // 适合拍平的结构，不适合分层结构
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> rtn = new LinkedList<>();
         if (root == null) return rtn;
@@ -56,6 +59,28 @@ public class LevelOrderTraversal {
 
         // 末层 Level 添加
         rtn.add(listLevel);
+
+        return rtn;
+    }
+
+    public List<List<Integer>> levelOrderOfficial(TreeNode root) {
+        List<List<Integer>> rtn = new LinkedList<>();
+        if (root == null) return rtn;
+        Queue<TreeNode> qt = new LinkedList<>();
+        qt.offer(root);
+
+        while (!qt.isEmpty()) {
+            int levelSize = qt.size();
+            List<Integer> levelList = new LinkedList<>();
+            for(int i = 0; i < levelSize; i++) {
+                TreeNode node = qt.poll();
+                levelList.add(node.val);
+
+                if(node.left != null) qt.offer(node.left);
+                if(node.right != null) qt.offer(node.right);
+            }
+            rtn.add(levelList);
+        }
 
         return rtn;
     }
