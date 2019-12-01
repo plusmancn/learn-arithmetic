@@ -5,8 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class  LevelOrderTraversalTest{
-    static TreeNode TreeNodeRoot;
+class MaxDepthOfBinaryTreeTest {
+    private static TreeNode TreeNodeRoot;
+    private static MaxDepthOfBinaryTree ins = new MaxDepthOfBinaryTree();
 
     @BeforeAll
     static void initAll() {
@@ -22,17 +23,13 @@ class  LevelOrderTraversalTest{
         e2.right = e5;
     }
 
-    @org.junit.jupiter.api.Test
-    void levelOrder() {
-
-
-        LevelOrderTraversal bfs = new LevelOrderTraversal();
-        System.out.println(bfs.levelOrder(TreeNodeRoot));
+    @Test
+    void maxDepth() {
+        System.out.println(ins.maxDepth(TreeNodeRoot));
     }
 
     @Test
-    void levelOrderOfficial() {
-        LevelOrderTraversal bfs = new LevelOrderTraversal();
-        System.out.println(bfs.levelOrderOfficial(TreeNodeRoot));
+    void maxDepthV2() {
+        System.out.println(ins.maxDepthV2(TreeNodeRoot));
     }
 }
