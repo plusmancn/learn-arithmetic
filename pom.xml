@@ -12,6 +12,8 @@
         <module>arithmetic</module>
         <module>design</module>
         <module>zktest</module>
+        <module>interview</module>
+        <module>mybatis-demo</module>
     </modules>
 
 
