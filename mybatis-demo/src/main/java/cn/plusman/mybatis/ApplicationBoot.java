@@ -1,5 +1,6 @@
 package cn.plusman.mybatis;
 
+import cn.plusman.mybatis.entity.Blog;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -24,7 +25,8 @@ public class ApplicationBoot {
                 new SqlSessionFactoryBuilder().build(inputStream);
 
             try (SqlSession session = sqlSessionFactory.openSession()) {
-
+                Blog blog = session.selectOne("cn.plusman.mybatis.mapper.BlogMapper.selectBlog", 1);
+                System.out.println(blog);
             }
         } catch (IOException e) {
             e.printStackTrace();
