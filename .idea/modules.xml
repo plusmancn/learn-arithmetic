@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/arithmetic/arithmetic.iml" filepath="$PROJECT_DIR$/arithmetic/arithmetic.iml" />
       <module fileurl="file://$PROJECT_DIR$/design/design.iml" filepath="$PROJECT_DIR$/design/design.iml" />
+      <module fileurl="file://$PROJECT_DIR$/http-agent/http-agent.iml" filepath="$PROJECT_DIR$/http-agent/http-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/http-application/http-application.iml" filepath="$PROJECT_DIR$/http-application/http-application.iml" />
       <module fileurl="file://$PROJECT_DIR$/interview/interview.iml" filepath="$PROJECT_DIR$/interview/interview.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-arithmetic.iml" filepath="$PROJECT_DIR$/learn-arithmetic.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-demo/mybatis-demo.iml" filepath="$PROJECT_DIR$/mybatis-demo/mybatis-demo.iml" />

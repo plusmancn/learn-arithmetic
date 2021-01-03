@@ -10,14 +10,18 @@
         <module name="arithmetic" />
         <module name="design" />
         <module name="interview" />
+        <module name="http-application" />
         <module name="spring-demo" />
         <module name="zktest" />
+        <module name="http-agent" />
         <module name="mybatis-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="arithmetic" target="1.8" />
       <module name="design" target="1.8" />
+      <module name="http-agent" target="1.8" />
+      <module name="http-application" target="1.8" />
       <module name="interview" target="1.8" />
       <module name="learn-arithmetic" target="1.8" />
       <module name="mybatis-demo" target="1.8" />
