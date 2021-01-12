@@ -1,7 +1,5 @@
 package cn.plusman.arithmetic.stringmatch;
 
-import sun.jvm.hotspot.utilities.Assert;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2015-2021. Souche.Group All Rights Reversed.
+ *
+ *
+ */
+
 package cn.plusman.arithmetic.hashtable;
 
 import java.util.HashMap;
