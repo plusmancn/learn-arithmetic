@@ -5,6 +5,6 @@
 - fixtures/
   - words.txt # 敏感词物料
 - impl/
-  - IAcWordsearch # AC 自动机搜索实现
+  - IAcWordsearch # AC 自动机搜索实现 
 - IWordsSearch # 搜索接口文件
 ```
