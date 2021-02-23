@@ -3,6 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <settings>
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <typeAlias type="cn.plusman.mybatis.entity.Blog" alias="Blog"/>
+        <typeAlias type="cn.plusman.mybatis.typehandler.JsonTypeHandler" alias="JsonTypeHandler"/>
+    </typeAliases>
+    
     <plugins>
         <plugin interceptor="cn.plusman.mybatis.plugin.SqlCostTimeInterceptor">
             <property name="author" value="plusman"/>
@@ -14,7 +24,7 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://192.168.31.25:13306/learn-java?useSSL=false&amp;allowPublicKeyRetrieval=true"/>
+                <property name="url" value="jdbc:mysql://macair.plusman.cn:13306/learn-java?useSSL=false&amp;allowPublicKeyRetrieval=true"/>
                 <property name="username" value="root"/>
                 <property name="password" value="pL5K6yT$#0yEkkH5TrRE4Q"/>
             </dataSource>
