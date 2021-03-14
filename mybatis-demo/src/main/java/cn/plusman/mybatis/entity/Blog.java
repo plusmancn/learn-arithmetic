@@ -1,6 +1,9 @@
 package cn.plusman.mybatis.entity;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
+
+import java.io.Serializable;
 
 /**
  * cn.plusman.mybatis.entity
@@ -9,7 +12,8 @@ import lombok.Data;
  * @since 12/17/20
  */
 @Data
-public class Blog {
+@Accessors(chain = true)
+public class Blog implements Serializable {
     private Integer blogId;
     private String content;
     private String camelStyle;

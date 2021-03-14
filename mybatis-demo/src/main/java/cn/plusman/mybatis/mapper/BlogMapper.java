@@ -14,5 +14,18 @@ public interface BlogMapper {
      * @param id
      * @return
      */
-    Blog selectBlog(int id);
+    Blog selectBlog(
+        int id
+    );
+    
+    /**
+     * default method
+     * @return
+     */
+    default Blog selectBlog() {
+        return this.selectBlog(12);
+        // return new Blog()
+        //     .setBlogId(12)
+        //     .setContent("hello world");
+    }
 }

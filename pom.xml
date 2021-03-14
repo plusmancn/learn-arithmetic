@@ -15,6 +15,7 @@
         <module>interview</module>
         <module>mybatis-demo</module>
         <module>http-application</module>
+        <module>java</module>
     </modules>
 
 

@@ -1,7 +1,12 @@
-package cn.plusman.mybatis;
+/*
+ * Copyright (c) 2021. <plusmancn@gmail.com> All Rights Reversed.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+
+package cn.plusman.mybatis.cachebug;
 
 import cn.plusman.mybatis.entity.Blog;
-import cn.plusman.mybatis.mapper.BlogMapper;
+import cn.plusman.mybatis.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -11,12 +16,10 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * PACKAGE_NAME
- *
  * @author plusman
- * @since 12/16/20
+ * @since 2021/3/13 3:05 PM
  */
-public class ApplicationBoot {
+public class MySecondCacheTest {
     public static void main(String[] args) {
         String resource = "mybatis/mybatis-config.xml";
         try {
@@ -24,16 +27,23 @@ public class ApplicationBoot {
             inputStream = Resources.getResourceAsStream(resource);
             SqlSessionFactory sqlSessionFactory =
                 new SqlSessionFactoryBuilder().build(inputStream);
-
-            try (SqlSession session = sqlSessionFactory.openSession()) {
-                // Blog blog = session.selectOne("cn.plusman.mybatis.mapper.BlogMapper.selectBlog", 1);
-                Blog blog1 = session.getMapper(BlogMapper.class).selectBlog(1);
-                Blog blognull = session.getMapper(BlogMapper.class).selectBlog();
-                System.out.println("Blog1: " + blog1);
-                System.out.println("Blognull: " + blognull);
-            }
+    
+    
+            SqlSession s1 = sqlSessionFactory.openSession();
+            s1.getMapper(UserMapper.class).selectByid3(2);
+            s1.commit();
+    
+            s1.getMapper(UserMapper.class).selectByid3(2);
+            s1.commit();
+    
+            SqlSession s2 = sqlSessionFactory.openSession();
+            s2.getMapper(UserMapper.class).selectByid3(2);
+            s2.commit();
+            
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    
 }

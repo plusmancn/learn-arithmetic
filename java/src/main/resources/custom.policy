@@ -1,0 +1,7 @@
+/* AUTOMATICALLY GENERATED ON Fri Mar 05 17:51:16 CST 2021*/
+/* DO NOT EDIT */
+
+grant {
+  permission java.io.FilePermission "/Users/plusman/Desktop/Learning/learn-arithmetic/java/src/main/resources/*", "read";
+};
+
