@@ -28,9 +28,9 @@ public class ApplicationBoot {
             try (SqlSession session = sqlSessionFactory.openSession()) {
                 // Blog blog = session.selectOne("cn.plusman.mybatis.mapper.BlogMapper.selectBlog", 1);
                 Blog blog1 = session.getMapper(BlogMapper.class).selectBlog(1);
-                Blog blognull = session.getMapper(BlogMapper.class).selectBlog();
+                // Blog blognull = session.getMapper(BlogMapper.class).selectBlog();
                 System.out.println("Blog1: " + blog1);
-                System.out.println("Blognull: " + blognull);
+                // System.out.println("Blognull: " + blognull);
             }
         } catch (IOException e) {
             e.printStackTrace();
