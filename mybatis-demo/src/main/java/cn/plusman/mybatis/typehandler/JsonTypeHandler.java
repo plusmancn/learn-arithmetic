@@ -19,10 +19,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
+ * JSON 类型处理器
  * @author plusman
  * @since 2021/2/23 10:28 AM
  */
-
 @MappedTypes({Object.class})
 public class JsonTypeHandler<T> extends BaseTypeHandler<T> {
     private static ObjectMapper objectMapper = new ObjectMapper();
