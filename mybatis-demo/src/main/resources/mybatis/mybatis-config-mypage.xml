@@ -15,13 +15,14 @@
         <typeAlias type="cn.plusman.mybatis.typehandler.JsonTypeHandler" alias="JsonTypeHandler"/>
     </typeAliases>
     
-    <plugins>
+    <!--<plugins>-->
         <!--<plugin interceptor="cn.plusman.mybatis.plugin.SqlCostTimeInterceptor">-->
         <!--    <property name="author" value="plusman"/>-->
         <!--</plugin>-->
-        <plugin interceptor="com.github.pagehelper.PageInterceptor">
-        </plugin>
-    </plugins>
+        <!--<plugin interceptor="cn.plusman.mybatis.plugin.PageInterceptor">-->
+        <!--    <property name="defaultLimit" value="20"/>-->
+        <!--</plugin>-->
+    <!--</plugins>-->
 
     <environments default="development">
         <environment id="development">

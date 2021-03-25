@@ -1,6 +1,11 @@
 package cn.plusman.mybatis.mapper;
 
 import cn.plusman.mybatis.entity.Blog;
+import cn.plusman.mybatis.plugin.pagedir.IPage;
+import com.github.pagehelper.PageRowBounds;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * cn.plusman.mybatis.mapper
@@ -16,6 +21,22 @@ public interface BlogMapper {
      */
     Blog selectBlog(
         int id
+    );
+    
+    /**
+     * 获取博客列表
+     * @return
+     */
+    List<Blog> selectBlogList(
+        @Param("page") IPage<Blog> page
+    );
+    
+    /**
+     * @param rowBounds
+     * @return
+     */
+    List<Blog> seleceBlogByPageHelper(
+        PageRowBounds rowBounds
     );
     
     /**

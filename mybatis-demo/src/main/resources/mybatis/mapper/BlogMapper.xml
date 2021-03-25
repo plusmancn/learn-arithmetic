@@ -11,4 +11,12 @@
     <select id="selectBlog" resultMap="BlogResultMap">
         select id, content, camel_style, json_field from blog where id = #{id}
     </select>
+    
+    <select id="selectBlogList" resultMap="BlogResultMap">
+        select id, content, camel_style, json_field from blog
+    </select>
+    
+    <select id="seleceBlogByPageHelper" resultMap="BlogResultMap">
+        select id, content, camel_style, json_field from blog
+    </select>
 </mapper>
