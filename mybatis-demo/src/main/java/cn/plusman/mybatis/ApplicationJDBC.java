@@ -1,7 +1,5 @@
 package cn.plusman.mybatis;
 
-import com.mysql.jdbc.Driver;
-
 import java.sql.*;
 
 /**

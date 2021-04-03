@@ -15,18 +15,27 @@
         <typeAlias type="cn.plusman.mybatis.typehandler.JsonTypeHandler" alias="JsonTypeHandler"/>
     </typeAliases>
     
-    <!--<plugins>-->
-        <!--<plugin interceptor="cn.plusman.mybatis.plugin.SqlCostTimeInterceptor">-->
-        <!--    <property name="author" value="plusman"/>-->
-        <!--</plugin>-->
-        <!--<plugin interceptor="cn.plusman.mybatis.plugin.PageInterceptor">-->
-        <!--    <property name="defaultLimit" value="20"/>-->
-        <!--</plugin>-->
-    <!--</plugins>-->
+    <plugins>
+        <plugin interceptor="cn.plusman.mybatis.plugin.SqlCostTimeInterceptor">
+            <property name="author" value="plusman"/>
+        </plugin>
+        <plugin interceptor="cn.plusman.mybatis.plugin.PageInterceptor">
+            <property name="defaultLimit" value="20"/>
+        </plugin>
+    </plugins>
 
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://macair.plusman.cn:13306/learn-java?useSSL=false&amp;allowPublicKeyRetrieval=true"/>
+                <property name="username" value="root"/>
+                <property name="password" value="pL5K6yT$#0yEkkH5TrRE4Q"/>
+            </dataSource>
+        </environment>
+        <environment id="another">
+            <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://macair.plusman.cn:13306/learn-java?useSSL=false&amp;allowPublicKeyRetrieval=true"/>
