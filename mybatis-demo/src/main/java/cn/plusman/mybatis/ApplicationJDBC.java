@@ -11,11 +11,11 @@ import java.sql.*;
 public class ApplicationJDBC {
     public static void main(String[] args) throws ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
-        
         try (
-            Connection conn = DriverManager.getConnection("jdbc:mysql://macair.plusman.cn:13306/learn-java?useSSL=false&amp;allowPublicKeyRetrieval=true&user=root&password=pL5K6yT$#0yEkkH5TrRE4Q");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://macair.plusman.cn:13306/learn-java?useSSL=false&amp;allowPublicKeyRetrieval=true", "root", System.getenv("LEARN_JAVA_PASSSWORD"));
         ) {
-            statementCase(conn);
+            transactionCase(conn);
+            // statementCase(conn);
             // preparedStatementCase(conn);
             // callableStatementCase(conn);
         } catch (SQLException throwables) {
@@ -24,8 +24,26 @@ public class ApplicationJDBC {
     }
     
     /**
-     *
+     * 事务测试
+     * @param connection
      */
+    public static void transactionCase(Connection connection) {
+        try {
+            connection.setAutoCommit(false);
+            
+            Savepoint savepoint = connection.setSavepoint();
+            
+            connection.rollback(savepoint);
+            
+            connection.commit();
+        } catch (SQLException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+    }
     
     /**
      * 存储过程需要预先创建
