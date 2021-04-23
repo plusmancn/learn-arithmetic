@@ -8,8 +8,8 @@
     <node x="303.5" y="170.0">org.springframework.beans.factory.support.DefaultSingletonBeanRegistry</node>
     <node x="597.5967261904763" y="85.0">org.springframework.beans.factory.config.SingletonBeanRegistry</node>
     <node x="701.375" y="340.0">org.springframework.beans.factory.config.AutowireCapableBeanFactory</node>
-    <node x="1263.7217261904761" y="425.0">org.springframework.context.ApplicationContext</node>
     <node x="0.0" y="85.0">org.springframework.beans.factory.support.BeanDefinitionRegistry</node>
+    <node x="1263.7217261904761" y="425.0">org.springframework.context.ApplicationContext</node>
     <node x="868.4583333333334" y="425.0">org.springframework.beans.factory.config.ConfigurableListableBeanFactory</node>
     <node x="452.33482142857144" y="425.0">org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory</node>
     <node x="312.0" y="255.0">org.springframework.beans.factory.support.FactoryBeanRegistrySupport</node>
@@ -149,7 +149,7 @@
       <point x="0.0" y="17.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="798.5" y="272.5" />
+  <settings layout="Hierarchic Group" zoom="0.9110220440881762" x="738.5" y="272.50000000000006" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
