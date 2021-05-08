@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="382.49999999999994" y="-59.99999999999999">java.util.logging.LogManager</node>
+    <node x="20.0" y="235.0">org.apache.commons.logging.LogAdapter</node>
+    <node x="84.375" y="115.0">java.util.logging.Logger</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.commons.logging.LogAdapter" target="org.apache.commons.logging.LogAdapter">
+      <point x="0.0" y="17.5" />
+      <point x="93.0" y="290.0" />
+      <point x="0.0" y="290.0" />
+      <point x="0.0" y="252.5" />
+      <point x="-73.0" y="-0.0" />
+    </edge>
+    <edge source="java.util.logging.LogManager" target="java.util.logging.LogManager">
+      <point x="-27.375" y="17.5" />
+      <point x="85.625" y="75.0" />
+      <point x="0.0" y="75.0" />
+      <point x="0.0" y="5.833333333333343" />
+      <point x="-73.0" y="-11.666666666666657" />
+    </edge>
+    <edge source="java.util.logging.Logger" target="java.util.logging.Logger">
+      <point x="37.33333333333334" y="17.5" />
+      <point x="177.70833333333334" y="190.0" />
+      <point x="44.375" y="190.0" />
+      <point x="44.375" y="120.83333333333334" />
+      <point x="-56.0" y="-11.666666666666664" />
+    </edge>
+    <edge source="java.util.logging.Logger" target="java.util.logging.LogManager">
+      <point x="-44.80000000000001" y="-17.5" />
+      <point x="95.57499999999999" y="95.0" />
+      <point x="103.875" y="95.0" />
+      <point x="-9.125" y="17.5" />
+    </edge>
+    <edge source="java.util.logging.LogManager" target="java.util.logging.Logger">
+      <point x="27.375" y="17.5" />
+      <point x="0.0" y="-17.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.2000000000000002" x="469.58333333333326" y="182.0" />
+  <SelectedNodes>
+    <node>java.util.logging.LogManager</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

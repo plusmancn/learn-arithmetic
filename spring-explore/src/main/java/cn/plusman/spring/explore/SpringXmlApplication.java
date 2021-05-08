@@ -4,11 +4,16 @@ import cn.plusman.spring.explore.message.MessageService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * @author plusman
  * @since 2021/4/20 4:37 PM
  */
 public class SpringXmlApplication {
+    
+    
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:application-file.xml");
     
