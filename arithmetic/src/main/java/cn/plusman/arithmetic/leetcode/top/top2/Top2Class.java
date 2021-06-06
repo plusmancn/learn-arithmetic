@@ -52,7 +52,6 @@ public class Top2Class {
             if (Vdiv > 0) {
                 current.next = new ListNode(1);
             }
-    
             
             Boolean l1Exists = l1 != null && (l1 = l1.next) != null;
             Boolean l2Exists = l2 != null && (l2 = l2.next) != null;
