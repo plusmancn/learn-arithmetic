@@ -20,7 +20,6 @@ public class Top10Class implements Top10Solution {
         // ==========> PreHandle
         // PatternList
         List<String> patternList = new ArrayList<>();
-        
         for (int i = 0; i < p.length(); i++) {
             if (i + 1 == p.length() || p.charAt(i+1) != '*') {
                 patternList.add(p.substring(i, i+1));
