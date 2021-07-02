@@ -17,4 +17,29 @@ public class InspectUtil {
     
         System.out.println(sb.toString());
     }
+    
+    public static ListNode initLinkedList(int[] arr) {
+        if (arr.length == 0) {
+            return null;
+        }
+        
+        ListNode head = new ListNode(arr[0]);
+        ListNode pre = head;
+        
+        for (int i = 1; i < arr.length; i++) {
+            ListNode node = new ListNode(arr[i]);
+            pre.next = node;
+            pre = node;
+        }
+        
+        return head;
+    }
+    
+    public static void displayLinkedList(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val + " ");
+            head = head.next;
+        }
+        System.out.println();
+    }
 }
