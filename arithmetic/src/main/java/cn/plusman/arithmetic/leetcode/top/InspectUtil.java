@@ -6,6 +6,10 @@ package cn.plusman.arithmetic.leetcode.top;
  * @since 2021/6/30 2:47 PM
  */
 public class InspectUtil {
+    /**
+     * Mostly used in DP
+     * @param arr
+     */
     public static void showArray(boolean[][] arr) {
         StringBuilder sb = new StringBuilder();
         for (int i = arr.length - 1; i > -1; i--) {
