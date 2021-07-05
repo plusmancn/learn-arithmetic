@@ -7,7 +7,7 @@ package cn.plusman.arithmetic.leetcode.top.top42;
 public class Top42ColumnClass implements Top42Solution {
     @Override
     public int trap(int[] height) {
-        if (height.length < 1) {
+        if (height.length < 2) {
             return 0;
         }
         

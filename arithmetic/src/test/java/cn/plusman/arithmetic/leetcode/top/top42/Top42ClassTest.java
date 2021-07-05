@@ -21,14 +21,17 @@ class Top42ClassTest {
         });
         Assertions.assertEquals(6, result);
 
-        // result = top42Solution.trap(new int[]{
-        //     4,2,0,3,2,5
-        // });
-        // Assertions.assertEquals(9, result);
-        //
-        // result = top42Solution.trap(new int[]{
-        //     5,5,1,7,1,1,5,2,7,6
-        // });
-        // Assertions.assertEquals(23, result);
+        result = top42Solution.trap(new int[]{
+            4,2,0,3,2,5
+        });
+        Assertions.assertEquals(9, result);
+
+        result = top42Solution.trap(new int[]{
+            5,5,1,7,1,1,5,2,7,6
+        });
+        Assertions.assertEquals(23, result);
+    
+        result = top42Solution.trap(new int[]{});
+        Assertions.assertEquals(0, result);
     }
 }
