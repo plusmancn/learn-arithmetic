@@ -22,6 +22,19 @@ public class InspectUtil {
         System.out.println(sb.toString());
     }
     
+    public static void showArray(int[][] arr) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                sb.append(arr[i][j]);
+                sb.append(' ');
+            }
+            sb.append("\n");
+        }
+        
+        System.out.println(sb.toString());
+    }
+    
     public static ListNode initLinkedList(int[] arr) {
         if (arr.length == 0) {
             return null;
