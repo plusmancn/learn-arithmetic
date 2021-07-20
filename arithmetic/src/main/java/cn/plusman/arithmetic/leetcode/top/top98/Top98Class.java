@@ -2,8 +2,6 @@ package cn.plusman.arithmetic.leetcode.top.top98;
 
 import cn.plusman.arithmetic.leetcode.top.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 /**

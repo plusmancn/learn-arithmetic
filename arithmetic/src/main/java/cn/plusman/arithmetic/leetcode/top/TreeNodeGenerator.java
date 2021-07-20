@@ -12,6 +12,10 @@ import java.util.Map;
  */
 public class TreeNodeGenerator {
     public static TreeNode fromList(List<Integer> arr) {
+        if (arr.isEmpty()) {
+            return null;
+        }
+        
         TreeNode root = null;
         
         Map<Integer, List<TreeNode>> horizontal = new HashMap<>();
