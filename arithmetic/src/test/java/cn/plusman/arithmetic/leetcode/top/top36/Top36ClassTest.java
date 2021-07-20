@@ -1,10 +1,7 @@
 package cn.plusman.arithmetic.leetcode.top.top36;
 
-import com.sun.tools.internal.xjc.outline.Aspect;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author plusman
