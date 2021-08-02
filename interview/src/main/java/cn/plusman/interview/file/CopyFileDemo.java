@@ -1,9 +1,6 @@
 package cn.plusman.interview.file;
 
-import sun.nio.ch.DirectBuffer;
-
 import java.io.*;
-import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.DoubleBuffer;
 import java.nio.channels.FileChannel;
