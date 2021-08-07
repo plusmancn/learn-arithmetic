@@ -13,12 +13,12 @@ import java.lang.reflect.Proxy;
 public class MyDynamicProxy {
     public static void main(String[] args) {
         HelloImpl helloImpl = new HelloImpl();
-        MyInvocationHandler handler = new MyInvocationHandler();
+        MyInvocationHandler handler = new MyInvocationHandler(helloImpl);
         // 第二个参数必须呀是 interface 类型，不然无法校验通过
         // 此处 HelloImpl.class 是 class 类型
-        Hello proxyHello = (HelloImpl) Proxy.newProxyInstance(Hello.class.getClassLoader(), new Class[]{Hello.class}, handler);
-        // proxyHello.sayHello();
-        // proxyHello.sayHello("plusman");
+        Hello proxyHello = (Hello) Proxy.newProxyInstance(Hello.class.getClassLoader(), new Class[]{Hello.class}, handler);
+        proxyHello.sayHello();
+        proxyHello.sayHello("plusman");
         
         HelloIndependent hi = new HelloIndependent();
         
@@ -58,10 +58,10 @@ class HelloImpl implements Hello {
 }
 
 class MyInvocationHandler implements InvocationHandler {
-    private Object targetCC;
+    private Object target;
 
     public MyInvocationHandler(Object target) {
-        this.targetCC = target;
+        this.target = target;
     }
     
     public MyInvocationHandler() {
@@ -79,6 +79,6 @@ class MyInvocationHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println(method.getName() + " was invoked");
-        return null;
+        return method.invoke(target, args);
     }
 }
