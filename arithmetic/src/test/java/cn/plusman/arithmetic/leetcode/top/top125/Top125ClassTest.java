@@ -16,17 +16,17 @@ class Top125ClassTest {
     void isPalindrome() {
         boolean result;
         
-        // result = top125Solution.isPalindrome("A man, a plan, a canal: Panama");
-        // Assertions.assertEquals(true, result);
-        //
-        // result = top125Solution.isPalindrome("");
-        // Assertions.assertEquals(true, result);
-        //
-        // result = top125Solution.isPalindrome("a");
-        // Assertions.assertEquals(true, result);
-        //
-        // result = top125Solution.isPalindrome("race a car");
-        // Assertions.assertEquals(false, result);
+        result = top125Solution.isPalindrome("A man, a plan, a canal: Panama");
+        Assertions.assertEquals(true, result);
+
+        result = top125Solution.isPalindrome("");
+        Assertions.assertEquals(true, result);
+
+        result = top125Solution.isPalindrome("a");
+        Assertions.assertEquals(true, result);
+
+        result = top125Solution.isPalindrome("race a car");
+        Assertions.assertEquals(false, result);
     
         result = top125Solution.isPalindrome("0P");
         Assertions.assertEquals(false, result);
