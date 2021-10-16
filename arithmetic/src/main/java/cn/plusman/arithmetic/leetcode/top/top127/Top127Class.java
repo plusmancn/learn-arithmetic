@@ -1,8 +1,6 @@
 package cn.plusman.arithmetic.leetcode.top.top127;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author plusman
@@ -23,7 +21,7 @@ public class Top127Class implements Top127Solution {
             return 0;
         }
         
-        List<String> nextWords = findWords(wordList, Arrays.asList(beginWord), endWord);
+        Set<String> nextWords = findWords(wordList, new HashSet<>(Arrays.asList(beginWord)), endWord);
         int depth = 1;
         
         while (!nextWords.isEmpty()) {
@@ -45,8 +43,8 @@ public class Top127Class implements Top127Solution {
         return 0;
     }
     
-    protected List<String> findWords(List<String> wordList, List<String> levelWords, String endWord) {
-        List<String> matchWords = new ArrayList<>();
+    protected Set<String> findWords(List<String> wordList, Set<String> levelWords, String endWord) {
+        Set<String> matchWords = new HashSet<>();
     
         for (String levelWord : levelWords) {
             for (String word : wordList) {
@@ -70,12 +68,12 @@ public class Top127Class implements Top127Solution {
             if (source.charAt(i) != target.charAt(i)) {
                 diff++;
             }
+            
+            if (diff > 1) {
+                return false;
+            }
         }
         
-        if (diff == 1) {
-            return true;
-        }
-        
-        return false;
+        return diff != 0;
     }
 }
